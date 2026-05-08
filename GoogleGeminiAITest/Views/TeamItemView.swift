@@ -25,15 +25,15 @@ struct TeamItemView: View {
             VStack(alignment: .leading) {
                 Text(providedTeam.name)
                     .font(.largeTitle)
-                    .foregroundColor(Color(hue: providedTeam.secondaryHue / 360, saturation: providedTeam.secondarySaturation / 100, brightness: providedTeam.secondaryBrightness / 100))
+                    .foregroundColor(Color(providedTeam.secondaryColorName))
                 
                 Text(providedTeam.heritage)
-                    .foregroundColor(Color(hue: providedTeam.secondaryHue / 360, saturation: providedTeam.secondarySaturation / 100, brightness: providedTeam.secondaryBrightness / 100))
+                    .foregroundColor(Color(providedTeam.secondaryColorName))
             }
             Spacer()
         }
         .padding()
-        .background(Color(hue: providedTeam.primaryHue / 360, saturation: providedTeam.primarySaturation / 100, brightness: providedTeam.primaryBrightness / 100))
+        .background(Color(providedTeam.primaryColorName))
         .cornerRadius(10)
     }
 }
